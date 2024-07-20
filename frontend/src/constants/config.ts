@@ -1,1 +1,1 @@
-export const server = import.meta.env.VITE_LOCAL_SERVER
+export const server = import.meta.env.VITE_SERVER
