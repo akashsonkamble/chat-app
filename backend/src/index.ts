@@ -1,18 +1,24 @@
-import * as express from "express";
 import * as dotenv from "dotenv";
+import * as path from "path";
+
+import connectDB from "./db/db";
+import { logger } from "./logs/index";
+import { app, server } from "./app";
 
 dotenv.config({
-    path: "../.env"
+    path: path.resolve(__dirname, "../.env"),
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT;
 
-const app = express();
+export const ENV_MODE = (process.env.NODE_ENV || "PRODUCTION").trim();
 
-app.get("/", (_, res: express.Response) => {
-    res.send("Chat Fusion Backend");
-});
-
-app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`);
-});
+connectDB()
+    .then(() => {
+        server.listen(PORT, () => {
+            logger.info(`⚙️ Server listening on port: ${PORT}`);
+        });
+    })
+    .catch((err) => {
+        logger.error("index :: MongoDB connection FAILED :: ", err);
+    });

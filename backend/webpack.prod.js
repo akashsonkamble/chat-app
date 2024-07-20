@@ -8,4 +8,4 @@ const config = {
     },
 };
 
-module.exports = { ...commonWebpack, ...config }
+module.exports = { ...commonWebpack, ...config };

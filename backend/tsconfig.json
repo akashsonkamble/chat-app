@@ -1,5 +1,15 @@
 {
-	"compilerOptions": {
-		"sourceMap": true
-	}
+    "compilerOptions": {
+        "target": "ES6", // Set the target ES version to ES6
+        "module": "commonjs", // Specify what module code is generated
+        "moduleResolution": "node", // Set the module resolution to node
+        "skipLibCheck": false, // Skip type checking all .d.ts files
+        "outDir": "./dist/",
+        "strict": true,
+        "sourceMap": true,
+        "noEmitOnError": true, // Do not emit outputs
+        "removeComments": true // Do not emit comments to output
+    },
+    "include": ["src/**/*.ts", "src/types/*.d.ts", ".env"],
+    "exclude": ["node_modules"]
 }

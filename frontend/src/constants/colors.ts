@@ -1,0 +1,10 @@
+export const ultraDarkBlue = "#0D2C4A";
+export const darkBlue = "#103559";
+export const blue = "#2F5E7E";
+export const lightBlue = "#E3EFF4";
+export const ultraLightBlue = "#F0F8FF";
+export const gray = "#111827";
+export const lightGray = "#E5E7EB";
+export const matteBlue = "#F3F4F6";
+export const matteBlack = "#1C1C1C";
+export const bgGradient = `linear-gradient(220deg, ${lightBlue} 0%, ${darkBlue} 100%)`;
