@@ -18,6 +18,7 @@ import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { setIsSearch } from "../../redux/reducers/misc";
 import { UserProps } from "../../types";
 import UserItem from "../shared/UserItem";
+import toast from "react-hot-toast";
 
 const Search: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -49,7 +50,7 @@ const Search: React.FC = () => {
                     }
                 })
                 .catch((error) => {
-                    console.log(error);
+                    toast.error(error);
                 });
         }, 1000);
 

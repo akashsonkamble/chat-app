@@ -53,7 +53,7 @@ const deleteFromCloudinary = async (publicIds: string[]) => {
     publicIds.forEach((publicId) => {
         cloudinary.uploader.destroy(publicId, (error, result) => {
             if (error) {
-                console.log(error);
+                logger.error(error);
             }
         });
     });

@@ -48,7 +48,6 @@ const AppLayout = <P extends object>(
         const { user } = useAppSelector((state) => state.auth);
         const { isMobileMenu } = useAppSelector((state) => state.misc);
         const { newMessagesAlert } = useAppSelector((state) => state.chat);
-        console.log("newMessagesAlert", newMessagesAlert);
 
         const [onlineUsers, setOnlineUsers] = useState<UserProps["_id"][]>([]);
 

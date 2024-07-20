@@ -56,7 +56,6 @@ const FileMenu = ({
 
             if (res.data) {
                 toast.success(`Successfully sent ${key}`, { id: toastId });
-                console.log(res);
             } else toast.error(`Failed to send ${key}`, { id: toastId });
         } catch (error) {
             toast.error(`Error uploading ${key}: ${error}`, { id: toastId });

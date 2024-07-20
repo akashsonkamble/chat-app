@@ -30,8 +30,6 @@ const AddMemberDialog: React.FC<{ chatId: ChatProps["_id"] }> = ({
         { skip: !chatId }
     );
 
-    console.log(groupDetails.data);
-
     const { isLoading, data, isError, error } =
         useAvailableFriendsQuery(chatId);
 
@@ -68,7 +66,7 @@ const AddMemberDialog: React.FC<{ chatId: ChatProps["_id"] }> = ({
         const ids = groupDetails?.data?.chat?.members.map(
             (id) => (id as unknown as { _id: string })._id
         );
-        console.log(ids);
+
         return data?.friends?.filter(
             (user: UserProps) => !ids?.includes(user._id)
         );
