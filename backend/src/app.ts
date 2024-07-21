@@ -21,6 +21,12 @@ import errorMiddleware from "./middlewares/error.middleware";
 import Message from "./models/message.model";
 import { CustomSocket } from "./types/socket.type";
 import { IUser } from "./types/user.type";
+import * as dotenv from "dotenv";
+import * as path from "path";
+
+dotenv.config({
+    path: path.resolve(__dirname, "../.env"),
+});
 
 const app = express();
 const server = createServer(app);

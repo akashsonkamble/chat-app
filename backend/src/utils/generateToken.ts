@@ -5,9 +5,9 @@ import { IUser } from "../types/user.type";
 export const cookieOptions = {
     maxAge: 24 * 60 * 60 * 1000,
     httpOnly: true,
-    secure: process.env.NODE_ENV === "PRODUCTION",
+    secure: process.env.NODE_ENV === "production",
     sameSite:
-        process.env.NODE_ENV === "PRODUCTION"
+        process.env.NODE_ENV === "production"
             ? ("None" as "none")
             : ("Lax" as "lax"),
 };

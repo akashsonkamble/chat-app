@@ -11,7 +11,7 @@ dotenv.config({
 
 const PORT = process.env.PORT;
 
-export const ENV_MODE = (process.env.NODE_ENV || "PRODUCTION").trim();
+export const ENV_MODE = (process.env.NODE_ENV || "production").trim();
 
 connectDB()
     .then(() => {

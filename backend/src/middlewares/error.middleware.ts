@@ -37,7 +37,7 @@ const errorMiddleware = (
         error: err,
     };
 
-    if (ENV_MODE === "DEVELOPMENT") {
+    if (ENV_MODE === "development") {
         errorResponse.error = err;
     }
 
